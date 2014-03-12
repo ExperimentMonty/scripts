@@ -18,7 +18,7 @@ if not args.no_wrap:
     maxy, maxx = stdscr.getmaxyx()
     curses.endwin()
 
-f = open("scripts/fortune.txt", "r")
+f = open("~/scripts/fortune.txt", "r")
 
 raw = f.readlines()
 
