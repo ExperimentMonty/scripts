@@ -6,6 +6,7 @@
 from random import choice
 from textwrap import wrap
 from argparse import ArgumentParser
+from os.path import expanduser, join
 
 parser = ArgumentParser(description="Print a quote from fortune.txt")
 parser.add_argument('-n', '--no-wrap', action='store_true',
@@ -18,7 +19,7 @@ if not args.no_wrap:
     maxy, maxx = stdscr.getmaxyx()
     curses.endwin()
 
-f = open("~/scripts/fortune.txt", "r")
+f = open(join(expanduser("~"),"scripts", "fortune.txt"), "r")
 
 raw = f.readlines()
 
